@@ -1,0 +1,32 @@
+<h3>New User Sign Up</h3>
+<% if !@user.errors.empty? %>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_for User.new do |f| %>
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+<div>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</div>
+<div>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</div>
+<div>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+</div>
+<div>
+  <%= recaptcha_tags %>
+</div>
+<div>
+  <%= f.submit "Sign Up" %>
+</div>
+<% end %>

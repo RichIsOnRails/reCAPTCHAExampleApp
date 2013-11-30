@@ -1,0 +1,3 @@
+== Rails reCAPTCHA Example App.
+
+See http://richonrails.com/articles/recaptcha-and-rails for more details.
